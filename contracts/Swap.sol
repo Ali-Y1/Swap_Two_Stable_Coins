@@ -55,7 +55,7 @@ contract Swap {
 
     function _reward(address winner) internal{
         IERC20 rewardToken = IERC20(MyToken);
-        bool send = rewardToken.transfer(winner,50);
+        bool send = rewardToken.transfer(winner,50 * 10 ** 18);
         require(send,"Transfer Failed");
     }
 }
